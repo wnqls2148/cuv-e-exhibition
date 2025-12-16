@@ -1,0 +1,98 @@
+/* HomeView.css (Final 3D Stack CSS) */
+
+.ticket-stack-container {
+  position: relative; 
+  height: 550px; 
+  display: flex; 
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.ticket-item {
+  position: absolute; 
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center center;
+  width: 250px; 
+  height: 350px; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+  border: 1px solid #ddd;
+}
+
+.ticket-item.is-active { z-index: 5; transform: scale(1) translateY(0); opacity: 1; }
+
+/* 오른쪽 스택 (diff: 1, 2) */
+.ticket-item.is-stacked-right-1 {
+  z-index: 4; transform: scale(0.9) translateY(-10px) translateX(120px); opacity: 0.8; filter: brightness(0.9);
+}
+.ticket-item.is-stacked-right-2 {
+  z-index: 3; transform: scale(0.8) translateY(-20px) translateX(250px); opacity: 0.6; filter: brightness(0.8); 
+}
+
+/* 왼쪽 스택 (diff: -1, -2) */
+.ticket-item.is-stacked-left-1 {
+  z-index: 4; transform: scale(0.9) translateY(-10px) translateX(-120px); opacity: 0.8; filter: brightness(0.9); 
+}
+.ticket-item.is-stacked-left-2 {
+  z-index: 3; transform: scale(0.8) translateY(-20px) translateX(-250px); opacity: 0.6; filter: brightness(0.8); 
+}
+
+/* components/pages/HomeViewContent.module.css 파일의 기존 내용 하단에 추가 */
+
+.appContentWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 60px; /* 좌우 섹션 간 간격 */
+  padding: 20px 0; 
+  min-height: calc(100vh - var(--header-height) - var(--footer-height-min));
+}
+
+.appLeftSection {
+  width: 40%;
+  max-width: 400px;
+  /* (좌측 텍스트/정보 섹션의 스타일을 추가) */
+}
+
+.appRightSection {
+  width: 60%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticketNavButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 50%;
+  width: 60px; 
+  height: 60px;
+  cursor: pointer;
+  z-index: 10; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s;
+}
+
+.ticketNavButton:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.prev {
+  left: -100px; /* 스택 영역보다 왼쪽으로 이동 */
+}
+
+.next {
+  right: -100px; /* 스택 영역보다 오른쪽으로 이동 */
+}
+
+/* 주: 위 스타일은 HomeViewContent.js의 return문에서 사용되고 있습니다. */
+
+/* 숨겨진 카드 및 화살표 버튼 스타일 유지... */
+/* ... (이전 답변의 나머지 CSS를 추가해야 합니다) ... */

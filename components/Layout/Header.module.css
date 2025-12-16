@@ -1,0 +1,40 @@
+/* Header.module.css */
+.header {
+  position: fixed; top: 0; left: 0; width: 100%; background-color: var(--color-bg-light); z-index: 1000;
+  padding: 15px 30px; display: flex; flex-direction: column; gap: 15px; 
+}
+.topBar { display: flex; align-items: center; justify-content: center; width: 100%; position: relative; }
+.promptBar {
+  width: 50%; min-width: 300px; max-width: 600px; background-color: var(--color-bg-light); border-radius: 30px;
+  padding: 10px 20px; display: flex; align-items: center; gap: 10px;
+  box-shadow: inset 5px 5px 10px var(--color-shadow-dark), inset -5px -5px 10px var(--color-shadow-light); 
+}
+.hamburgerButton {
+  position: absolute; left: 0; background-color: var(--color-bg-light); border: none; border-radius: 50%; 
+  padding: 10px; cursor: pointer;
+  box-shadow: 4px 4px 8px var(--color-shadow-dark), -4px -4px 8px var(--color-shadow-light); transition: all 0.2s;
+}
+.hamburgerButton:active {
+  box-shadow: inset 3px 3px 6px var(--color-shadow-dark), inset -3px -3px 6px var(--color-shadow-light);
+}
+.bottomBar { display: flex; justify-content: space-between; width: 100%; }
+.actionButton {
+  background-color: var(--color-bg-light); border: none; border-radius: 20px; padding: 8px 18px; cursor: pointer;
+  box-shadow: 3px 3px 6px var(--color-shadow-dark), -3px -3px 6px var(--color-shadow-light); transition: all 0.1s ease;
+}
+.actionButton:active {
+  box-shadow: inset 2px 2px 5px var(--color-shadow-dark), inset -2px -2px 5px var(--color-shadow-light);
+}
+
+/* components/Layout/Header.module.css 파일에 추가할 내용 */
+
+.hamburgerIcon {
+    /* 아이콘 크기/색상 조정 (선택적) */
+    display: block; 
+}
+.promptText {
+    /* 프롬프트 바 내부 텍스트 스타일 */
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 500;
+}

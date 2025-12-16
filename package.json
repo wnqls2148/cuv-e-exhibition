@@ -1,0 +1,22 @@
+{
+  "name": "cukee-exhibition",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "start": "next start",
+    "build": "next build",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "lucide-react": "^0.561.0",
+    "next": "^14.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.2.5"
+  }
+}
